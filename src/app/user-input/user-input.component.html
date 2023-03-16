@@ -1,0 +1,19 @@
+<form (submit)="onSubmit()">
+  <div class="form-control">
+    <label for="city">city</label>
+    <input type="text" id="city" name="city" [(ngModel)]="city" required />
+  </div>
+
+  <div class="form-control">
+    <label for="country">country</label>
+    <input
+      required
+      type="text"
+      id="country"
+      name="country"
+      [(ngModel)]="country"
+    />
+  </div>
+
+  <button type="submit">submit</button>
+</form>
