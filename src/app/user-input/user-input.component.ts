@@ -28,7 +28,6 @@ export class UserInputComponent {
 
       const days: any[] = [];
       for (let i = 0; i < list.length; i++) i % 8 === 0 && days.push(list[i]);
-
       this.dataFetched.emit(days);
     } catch (error) {
       console.error('Error fetching weather data:', error);
