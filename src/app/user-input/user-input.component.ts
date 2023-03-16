@@ -20,7 +20,7 @@ export class UserInputComponent {
 
       const { lat, lon } = latLonData;
 
-      const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+      const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=imperial`;
       const weatherResponse = await fetch(weatherUrl);
       if (!weatherResponse.ok) throw new Error(weatherResponse.statusText);
       const weatherData = await weatherResponse.json();

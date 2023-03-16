@@ -1,5 +1,9 @@
 <div *ngIf="days">
-    <ul>
-        <li class="item" *ngFor="let day of days">{{ day.dt }}</li>
-    </ul>
+  <ul>
+    <app-day-card
+      [day]="day"
+      class="item"
+      *ngFor="let day of days"
+    ></app-day-card>
+  </ul>
 </div>
