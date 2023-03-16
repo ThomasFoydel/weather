@@ -1,7 +1,14 @@
-<form (submit)="onSubmit()">
+<form class="user-input-form" (submit)="onSubmit()">
   <div class="form-control">
     <label for="city">city</label>
-    <input type="text" id="city" name="city" [(ngModel)]="city" required />
+    <input
+      required
+      id="city"
+      name="city"
+      type="text"
+      placeholder="city"
+      [(ngModel)]="city"
+    />
   </div>
 
   <div class="form-control">
@@ -11,6 +18,7 @@
       type="text"
       id="country"
       name="country"
+      placeholder="country"
       [(ngModel)]="country"
     />
   </div>
