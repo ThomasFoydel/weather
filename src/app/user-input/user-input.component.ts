@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user-input',
@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class UserInputComponent {
   city = '';
-  days: any = [];
+  @Output() dataFetched = new EventEmitter<any>();
 
   async onSubmit() {
     const API_KEY = '5edaf9af814e0a53bb982ef8b401101a';
@@ -29,7 +29,7 @@ export class UserInputComponent {
       const days: any[] = [];
       for (let i = 0; i < list.length; i++) i % 8 === 0 && days.push(list[i]);
 
-      this.days = days;
+      this.dataFetched.emit(days);
     } catch (error) {
       console.error('Error fetching weather data:', error);
     }
