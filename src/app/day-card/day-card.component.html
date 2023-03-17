@@ -1,5 +1,5 @@
 <div class="day-card" *ngIf="day">
-  <p>{{ day.dt }}</p>
+  <app-date-time-display [time]="day.dt"></app-date-time-display>
   <p>temp: {{ day.main.temp }}°F</p>
   <p>high: {{ day.main.temp_max }}°F</p>
   <p>low: {{ day.main.temp_min }}°F</p>

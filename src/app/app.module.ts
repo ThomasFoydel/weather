@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { UserInputComponent } from './user-input/user-input.component';
 import { DataDisplayComponent } from './data-display/data-display.component';
 import { DayCardComponent } from './day-card/day-card.component';
+import { DateTimeDisplayComponent } from './date-time-display/date-time-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserInputComponent,
     DataDisplayComponent,
-    DayCardComponent
+    DayCardComponent,
+    DateTimeDisplayComponent
   ],
   imports: [
     BrowserModule,
