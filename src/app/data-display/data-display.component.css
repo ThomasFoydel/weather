@@ -1,3 +1,10 @@
+.city {
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
 .day-container {
   gap: 10px;
   display: grid;

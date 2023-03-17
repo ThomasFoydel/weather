@@ -7,9 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'weather';
+  citySearched = '';
   days = [];
 
   onDataFetched(data: any) {
     this.days = data;
+  }
+
+  onCitySearched(city: string) {
+    this.citySearched = city;
   }
 }

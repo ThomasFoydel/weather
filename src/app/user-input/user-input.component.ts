@@ -8,6 +8,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class UserInputComponent {
   city = '';
   @Output() dataFetched = new EventEmitter<any>();
+  @Output() citySearched = new EventEmitter<any>();
 
   async onSubmit() {
     const API_KEY = '5edaf9af814e0a53bb982ef8b401101a';
@@ -29,6 +30,8 @@ export class UserInputComponent {
       const days: any[] = [];
       for (let i = 0; i < list.length; i++) i % 8 === 0 && days.push(list[i]);
       this.dataFetched.emit(days);
+      this.citySearched.emit(this.city);
+      this.city = '';
     } catch (error) {
       console.error('Error fetching weather data:', error);
     }
