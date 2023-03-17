@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   updateHistory(city: string) {
     if (this.searchHistory.length === 10) {
-      this.searchHistory = this.searchHistory.slice(1)
+      this.searchHistory = this.searchHistory.slice(1);
     }
     if (this.searchHistory.includes(city)) {
       this.searchHistory = this.searchHistory.filter((c) => c !== city);
@@ -25,6 +25,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     const saved = localStorage.getItem('cities') || '[]';
     const parsed = JSON.parse(saved);
+    const mostRecent = parsed[parsed.length - 1];
+    if (mostRecent) this.onSubmit(mostRecent);
     this.searchHistory = parsed;
   }
 
