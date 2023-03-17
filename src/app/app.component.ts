@@ -11,6 +11,9 @@ export class AppComponent implements OnInit {
   days: any[] = [];
 
   updateHistory(city: string) {
+    if (this.searchHistory.length === 10) {
+      this.searchHistory = this.searchHistory.slice(1)
+    }
     if (this.searchHistory.includes(city)) {
       this.searchHistory = this.searchHistory.filter((c) => c !== city);
     }

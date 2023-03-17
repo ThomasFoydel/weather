@@ -16,10 +16,10 @@ export class HistorySelectorComponent {
   }
 
   forward() {
-    this.offset -= 70;
+    if (this.offset > 0) this.offset -= 70;
   }
 
   backward() {
-    this.offset += 70;
+    if (this.offset < 1200) this.offset += 70;
   }
 }
