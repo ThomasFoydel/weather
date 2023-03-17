@@ -6,6 +6,7 @@
   <p>pressure: {{ day.main.pressure }}hPa</p>
   <p>{{ day.weather[0].description }}</p>
   <img
+    class="icon"
     [src]="'http://openweathermap.org/img/wn/' + day.weather[0].icon + '.png'"
   />
 </div>
