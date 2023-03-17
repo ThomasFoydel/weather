@@ -1,4 +1,5 @@
 <app-history-selector (onSelect)="onSelect.emit($event)" [currentCity]="currentCity" [searchHistory]="searchHistory" />
+<p class="current-city">{{ currentCity }}</p>
 <ul class="day-container" *ngIf="days">
   <app-day-card [day]="day" *ngFor="let day of days" />
 </ul>
