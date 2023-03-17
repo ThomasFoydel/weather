@@ -1,3 +1,62 @@
 .history-selector {
-    
+  gap: 10px;
+  padding: 5px;
+  height: 35px;
+  display: flex;
+  margin-left: 50%;
+  overflow: hidden;
+  position: relative;
+  justify-content: flex-end;
+  transform: translateX(-90%);
+}
+
+.button-container {
+  gap: 5px;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.4s ease;
+}
+
+.history-selector button {
+  color: #ccc;
+  padding: 0 0.4rem;
+  font-size: 1.2rem;
+  background: #222;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  border: 1px solid #cccccc6d;
+}
+
+.history-selector button:hover {
+  color: #3ce4dc;
+  background: #111;
+  border-color: #3ce4dc;
+}
+
+.overlay-shadow {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+  background: linear-gradient(90deg, #111 10%, #11111172 50%, #11111135 70%, transparent);
+}
+
+.scroll-buttons {
+  margin-left: 50%;
+  position: absolute;
+  transform: translateX(48px) translateY(-38px);
+}
+.scroll-button {
+  margin: 0 0.2rem;
+  font-size: 1.6rem;
+  padding: 0 0.4rem;
+  background: #999;
+  border: 1px solid #999;
+  transition: all 0.25s ease;
+}
+
+.scroll-button:hover {
+  background: #aaa;
+  border: 1px solid #ccc;
 }

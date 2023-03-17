@@ -9,8 +9,17 @@ export class HistorySelectorComponent {
   @Input() searchHistory: string[] = [];
   @Input() currentCity: string = '';
   @Output() onSelect = new EventEmitter<string>();
+  offset = 0;
 
   handleClick(city: string) {
     this.onSelect.emit(city);
+  }
+
+  forward() {
+    this.offset -= 70;
+  }
+
+  backward() {
+    this.offset += 70;
   }
 }
