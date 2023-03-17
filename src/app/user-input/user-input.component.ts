@@ -7,33 +7,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class UserInputComponent {
   city = '';
-  @Output() dataFetched = new EventEmitter<any>();
   @Output() citySearched = new EventEmitter<any>();
 
-  async onSubmit() {
-    const API_KEY = '5edaf9af814e0a53bb982ef8b401101a';
-    const latLonUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${this.city}&limit=1&appid=${API_KEY}`;
-    try {
-      const latLonResponse = await fetch(latLonUrl);
-      if (!latLonResponse.ok) throw new Error(latLonResponse.statusText);
-      const [latLonData] = await latLonResponse.json();
-      if (!latLonData) throw new Error('No lat lon data found');
-
-      const { lat, lon } = latLonData;
-
-      const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=imperial`;
-      const weatherResponse = await fetch(weatherUrl);
-      if (!weatherResponse.ok) throw new Error(weatherResponse.statusText);
-      const weatherData = await weatherResponse.json();
-      const { list } = weatherData;
-
-      const days: any[] = [];
-      for (let i = 0; i < list.length; i++) i % 8 === 0 && days.push(list[i]);
-      this.dataFetched.emit(days);
-      this.citySearched.emit(this.city);
-      this.city = '';
-    } catch (error) {
-      console.error('Error fetching weather data:', error);
-    }
+  onSubmit(city: string) {
+    this.citySearched.emit(city);
+    this.city = '';
   }
 }

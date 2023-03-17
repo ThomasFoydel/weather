@@ -8,6 +8,7 @@ import { UserInputComponent } from './user-input/user-input.component';
 import { DataDisplayComponent } from './data-display/data-display.component';
 import { DayCardComponent } from './day-card/day-card.component';
 import { DateTimeDisplayComponent } from './date-time-display/date-time-display.component';
+import { HistorySelectorComponent } from './history-selector/history-selector.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DateTimeDisplayComponent } from './date-time-display/date-time-display.
     UserInputComponent,
     DataDisplayComponent,
     DayCardComponent,
-    DateTimeDisplayComponent
+    DateTimeDisplayComponent,
+    HistorySelectorComponent
   ],
   imports: [
     BrowserModule,

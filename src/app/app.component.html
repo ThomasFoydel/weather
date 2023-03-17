@@ -1,5 +1,2 @@
-<app-user-input
-  (dataFetched)="onDataFetched($event)"
-  (citySearched)="onCitySearched($event)"
-/>
-<app-data-display [days]="days" [city]="citySearched"/>
+<app-user-input (citySearched)="onSubmit($event)" />
+<app-data-display (onSelect)="onSubmit($event)" [days]="days" [currentCity]="currentCity" [searchHistory]="searchHistory"/>

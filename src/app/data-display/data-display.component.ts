@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-data-display',
@@ -7,5 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class DataDisplayComponent {
   @Input() days: any;
-  @Input() city: string = '';
+  @Input() currentCity: string = '';
+  @Input() searchHistory: string[] = [];
+  @Output() onSelect = new EventEmitter<string>();
 }
