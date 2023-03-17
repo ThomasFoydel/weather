@@ -1,3 +1,10 @@
-.item {
+.day-container {
+  gap: 10px;
+  display: grid;
   color: white;
+  padding: 1.2rem;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 240px);
 }
