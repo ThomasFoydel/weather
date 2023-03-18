@@ -1,2 +1,2 @@
 <app-user-input (citySearched)="onSubmit($event)" />
-<app-data-display (onSelect)="onSubmit($event)" [days]="days" [currentCity]="currentCity" [searchHistory]="searchHistory"/>
+<app-data-display (onClear)="onClear()" (onSelect)="onSubmit($event)" [days]="days" [currentCity]="currentCity" [searchHistory]="searchHistory"/>

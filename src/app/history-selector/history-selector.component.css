@@ -42,13 +42,13 @@
   background: linear-gradient(90deg, #111 10%, #11111172 50%, #11111135 70%, transparent);
 }
 
-.scroll-buttons {
+.history-buttons {
   margin-left: 50%;
   position: absolute;
   transform: translateX(5vw) translateY(-38px);
 }
 
-.scroll-button {
+.history-button {
   margin: 0 0.2rem;
   font-size: 1.6rem;
   padding: 0 0.4rem;
@@ -57,7 +57,7 @@
   transition: all 0.25s ease;
 }
 
-.scroll-button:hover {
+.history-button:hover {
   background: #aaa;
   border: 1px solid #ccc;
 }

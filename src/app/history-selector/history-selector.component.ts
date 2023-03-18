@@ -16,6 +16,8 @@ export class HistorySelectorComponent implements OnChanges {
   @Input() searchHistory: string[] = [];
   @Input() currentCity: string = '';
   @Output() onSelect = new EventEmitter<string>();
+  @Output() onClear = new EventEmitter();
+
   offset = 0;
 
   handleClick(city: string) {

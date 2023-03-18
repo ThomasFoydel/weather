@@ -9,5 +9,6 @@ export class DataDisplayComponent {
   @Input() days: any;
   @Input() currentCity: string = '';
   @Input() searchHistory: string[] = [];
+  @Output() onClear = new EventEmitter();
   @Output() onSelect = new EventEmitter<string>();
 }

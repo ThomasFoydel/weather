@@ -9,20 +9,21 @@
   </div>
   <div class="overlay-shadow"></div>
 </div>
-<div class="scroll-buttons">
+<div class="history-buttons">
   <button
-    class="scroll-button"
+    class="history-button"
     (click)="backward()"
     [ngStyle]="{ opacity: offset < 1190 ? '1' : '0.5' }"
   >
     <
   </button>
   <button
-    class="scroll-button"
+    class="history-button"
     (click)="forward()"
     [ngStyle]="{ opacity: offset > 0 ? '1' : '0.5' }"
   >
     >
   </button>
+  <button (click)="onClear.emit()" class="history-button">clear</button>
   <span>{{ offset }}</span>
 </div>

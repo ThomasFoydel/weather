@@ -30,6 +30,11 @@ export class AppComponent implements OnInit {
     this.searchHistory = parsed;
   }
 
+  onClear() {
+    localStorage.clear();
+    this.searchHistory = [];
+  }
+
   async onSubmit(city: string) {
     const API_KEY = '5edaf9af814e0a53bb982ef8b401101a';
     const latLonUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`;
