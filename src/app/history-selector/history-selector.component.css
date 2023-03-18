@@ -47,6 +47,7 @@
   position: absolute;
   transform: translateX(5vw) translateY(-38px);
 }
+
 .scroll-button {
   margin: 0 0.2rem;
   font-size: 1.6rem;

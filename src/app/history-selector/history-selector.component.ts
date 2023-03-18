@@ -27,7 +27,7 @@ export class HistorySelectorComponent implements OnChanges {
   }
 
   backward() {
-    if (this.offset < 1200) this.offset += 70;
+    if (this.offset < 1190) this.offset += 70;
   }
 
   ngOnChanges(changes: SimpleChanges): void {
