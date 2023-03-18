@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build --output-path docs --base-href /weather/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
