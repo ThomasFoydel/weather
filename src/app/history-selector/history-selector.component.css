@@ -45,7 +45,7 @@
 .scroll-buttons {
   margin-left: 50%;
   position: absolute;
-  transform: translateX(48px) translateY(-38px);
+  transform: translateX(5vw) translateY(-38px);
 }
 .scroll-button {
   margin: 0 0.2rem;
