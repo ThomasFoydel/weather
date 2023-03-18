@@ -9,8 +9,8 @@ export class UserInputComponent {
   city = '';
   @Output() citySearched = new EventEmitter<any>();
 
-  onSubmit(city: string) {
-    this.citySearched.emit(city);
+  onSubmit() {
+    this.citySearched.emit(this.city);
     this.city = '';
   }
 }

@@ -1,4 +1,4 @@
-<form class="user-input-form" (submit)="citySearched.emit(city)">
+<form class="user-input-form" (submit)="onSubmit()">
   <div class="form-control">
     <label for="city">city</label>
     <input
@@ -10,6 +10,5 @@
       [(ngModel)]="city"
     />
   </div>
-
   <button type="submit">SEARCH</button>
 </form>
