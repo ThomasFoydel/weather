@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
 
   async onSubmit(city: string) {
     const API_KEY = '5edaf9af814e0a53bb982ef8b401101a';
-    const latLonUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`;
+    const latLonUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`;
     try {
       const latLonResponse = await fetch(latLonUrl);
       if (!latLonResponse.ok) throw new Error(latLonResponse.statusText);
