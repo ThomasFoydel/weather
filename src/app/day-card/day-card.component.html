@@ -1,12 +1,27 @@
 <div class="day-card" *ngIf="day">
   <app-date-time-display [time]="day.dt"></app-date-time-display>
-  <p>temp: {{ day.main.temp }}°F</p>
-  <p>high: {{ day.main.temp_max }}°F</p>
-  <p>low: {{ day.main.temp_min }}°F</p>
-  <p>pressure: {{ day.main.pressure }}hPa</p>
-  <p>{{ day.weather[0].description }}</p>
+  <table class="temperatures">
+    <tr>
+      <td>temp</td>
+      <td align="right">{{ day.main.temp }}°F</td>
+    </tr>
+    <tr>
+      <td>high</td>
+      <td align="right">{{ day.main.temp_min }}°F</td>
+    </tr>
+    <tr>
+      <td>low</td>
+      <td align="right">{{ day.main.temp }}°F</td>
+    </tr>
+    <tr>
+      <td>pressure</td>
+      <td align="right">{{ day.main.pressure }}hPa</td>
+    </tr>
+  </table>
+
   <img
     class="icon"
     [src]="'http://openweathermap.org/img/wn/' + day.weather[0].icon + '.png'"
   />
+  <p class="condition">{{ day.weather[0].description }}</p>
 </div>

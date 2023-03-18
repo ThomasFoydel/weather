@@ -6,7 +6,8 @@
 }
 
 .day-container {
-  gap: 10px;
+  gap: 16px;
+  row-gap: 24px;
   display: grid;
   color: white;
   padding: 1.2rem;
